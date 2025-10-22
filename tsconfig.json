@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "isolatedModules": true,
+        "useDefineForClassFields": true,
+        "types": ["vite/client"],
+        "module": "es2022"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["**/*.spec.ts"]
+}

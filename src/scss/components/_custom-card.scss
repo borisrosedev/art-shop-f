@@ -1,0 +1,8 @@
+@use "../abstract/mixins";
+
+.custom-card__social-proof {
+    @include mixins.flex-container(row, 'flex-start', 'center');
+    article {
+        margin-inline-end: 20px;
+    }
+}

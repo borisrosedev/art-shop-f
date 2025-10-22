@@ -1,0 +1,8 @@
+@use "../abstract/mixins";
+
+.social-proof {
+    @include mixins.flex-container();
+    span {
+        margin-inline-start: 5px;
+    }
+}

@@ -1,0 +1,19 @@
+@use "../abstract/mixins";
+
+
+
+.landing__main {
+    @include mixins.flex-container(column, center, center);
+    background-image: url('/assets/wall-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+        margin-block: 20px;
+    }
+
+    button {
+        text-transform: uppercase;
+    }
+}

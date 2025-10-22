@@ -1,0 +1,52 @@
+@use "../abstract/mixins";
+
+.home__main {
+    @include mixins.flex-container();
+    background-image: url('/assets/wall-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .home__hero-section {
+        margin: 20px;
+        @include mixins.flex-container()
+        
+    }
+    .home__last-news-card {
+        & > img {
+            height: 300px;
+            object-fit: cover;
+        }
+        width: 300px;
+    }
+
+
+
+    .home__carousel-section {
+        width: 700px;
+
+        margin-inline: 20px;
+     
+
+       
+    }
+
+    .home__authors-section {
+        .card > img {
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+
+    .home__cta-section {
+        margin-block: 30px;
+        width: 100%;
+        @include mixins.flex-container(row,center,center);
+    }
+
+    h1 {
+        margin-block: 20px;
+    }
+
+  
+}
