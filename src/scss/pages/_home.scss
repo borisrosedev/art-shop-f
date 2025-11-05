@@ -1,17 +1,16 @@
-@use "../abstract/mixins";
+@use '../abstract/mixins';
+@use '../base/variables';
+@use '../abstract/functions';
+@use '../abstract/extensions';
 
 .home__main {
     @include mixins.flex-container();
-    background-image: url('/assets/wall-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
+    @extend %background;
     .home__hero-section {
         margin: 20px;
-        @include mixins.flex-container()
-        
+        @include mixins.flex-container();
     }
+
     .home__last-news-card {
         & > img {
             height: 300px;
@@ -20,15 +19,10 @@
         width: 300px;
     }
 
-
-
     .home__carousel-section {
         width: 700px;
 
         margin-inline: 20px;
-     
-
-       
     }
 
     .home__authors-section {
@@ -41,12 +35,47 @@
     .home__cta-section {
         margin-block: 30px;
         width: 100%;
-        @include mixins.flex-container(row,center,center);
+        @include mixins.flex-container(row, center, center);
     }
 
     h1 {
         margin-block: 20px;
     }
+}
 
-  
+@media screen and (max-width: variables.$layout-breakpoint-medium) {
+    .home__main {
+        @include mixins.flex-container(column, start, start, mobile);
+        width: 100%;
+        .home__hero-section {
+            @include mixins.flex-container(column, start, start, mobile);
+            width: 100%;
+            margin: 0;
+        }
+        .home__last-updates-section {
+            width: 100%;
+            @include mixins.flex-container(column, center, center);
+        }
+        .home__last-news-card {
+            @include mixins.flex-container(column, center, center);
+            margin-block: 20px;
+        }
+        .home__carousel-section {
+            width: 100%;
+            @include mixins.flex-container(column, center, center);
+            margin-block: 30px;
+            margin-inline: 0;
+        }
+        .home__authors-section {
+            width: 100%;
+            padding-block-start: 40px;
+            padding-block-end: 100px;
+            @include mixins.flex-container(column, center, center);
+
+            .card > img {
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+    }
 }

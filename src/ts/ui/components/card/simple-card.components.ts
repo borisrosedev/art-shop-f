@@ -1,9 +1,13 @@
-
-
-
-function simpleCardComponent({ ariaLabel, text, classNames }: { ariaLabel: string, text: string, classNames?: string }) {
-    return (
-        `
+function simpleCardComponent({
+    ariaLabel,
+    text,
+    classNames,
+}: {
+    ariaLabel: string;
+    text: string;
+    classNames?: string;
+}) {
+    return `
         <div class="card ${classNames ?? ''}" aria-label="${ariaLabel}">
             <div class="card-body">
                 ${text}
@@ -11,9 +15,7 @@ function simpleCardComponent({ ariaLabel, text, classNames }: { ariaLabel: str
         </div>
         
         
-        `
-    )
+        `;
 }
-
 
 export default simpleCardComponent;

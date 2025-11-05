@@ -90,7 +90,7 @@ function homePage() {
                     <section class="home__cta-section">
                         ${buttonComponent({
                             content: 'Explore her galery',
-                            classNames: 'btn-warning btn-lg'
+                            classNames: 'btn-warning btn-lg',
                         })}
                     </section>
                 </section>

@@ -1,8 +1,7 @@
-@use "../abstract/mixins";
+@use '../abstract/mixins';
 
 .app__main {
     padding-top: 10vh;
-    min-height:100vh;
+    min-height: 100vh;
     @include mixins.flex-container();
-
 }

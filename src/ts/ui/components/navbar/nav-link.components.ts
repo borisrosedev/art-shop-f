@@ -18,10 +18,13 @@ function navLinkComponent({
             <a class="nav-link dropdown-toggle" 
                 href="${href}" 
                 role="button" data-bs-toggle="${toggleElementId ?? 'dropdown'}" 
-                aria-expanded="${ariaExpended ?? false}">
+                aria-expanded="${ariaExpended ?? false}"
+            >
                 ${navLinkName}
             </a>
         
         `;
     }
 }
+
+export default navLinkComponent;

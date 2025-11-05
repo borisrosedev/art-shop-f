@@ -1,14 +1,13 @@
 @use './scss/base/typography';
 @use './scss/base/variables';
 @use './scss/abstract/mixins';
-
+@use './scss/abstract/functions';
 
 @use './scss/base/base';
 
 @use './scss/components/social-proof';
 @use './scss/components/custom-card';
 @use './scss/components/carousel';
-
 
 @use './scss/layout/header';
 

@@ -1,13 +1,15 @@
-
-
-
 @mixin flex-container(
-    $dir: row, 
+    $dir: row,
     $just: flex-start,
     $al: flex-start,
+    $mode: desktop
 ) {
+    @if ($mode == mobile) {
+        flex-direction: column;
+    } @else {
+        flex-direction: $dir;
+    }
     display: flex;
-    flex-direction: $dir;
     justify-content: $just;
     align-items: $al;
 }

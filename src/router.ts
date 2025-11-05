@@ -1,5 +1,8 @@
 import ROUTES from './ts/constants/routes';
+import HeaderContainer from './ts/containers/header.containers';
+import HomeContainer from './ts/containers/home.containers';
 import LandingContainer from './ts/containers/landing.containers';
+import LoginAndRegisterContainer from './ts/containers/login-and-register.containers';
 import appHeaderLayout from './ts/ui/layout/app-header.layout';
 
 declare global {
@@ -23,14 +26,21 @@ function onNavigate(h: string): void {
         case ROUTES.home.path:
             appDiv.insertAdjacentHTML('afterbegin', appHeaderLayout());
             appDiv.insertAdjacentHTML('beforeend', ROUTES.home.component());
+            new HeaderContainer(window.onNavigate);
+            new HomeContainer(window.onNavigate);
             break;
         case ROUTES.landing.path:
             appDiv.insertAdjacentHTML('beforeend', ROUTES.landing.component());
             new LandingContainer(window.onNavigate);
             break;
+        case ROUTES.register.path:
+            appDiv.insertAdjacentHTML('afterbegin', appHeaderLayout());
+            appDiv.insertAdjacentHTML('beforeend', ROUTES.login.component()); 
+            new LoginAndRegisterContainer(window.onNavigate, false);
         case ROUTES.login.path:
             appDiv.insertAdjacentHTML('afterbegin', appHeaderLayout());
-            appDiv.insertAdjacentHTML('beforeend', ROUTES.login.component())
+            appDiv.insertAdjacentHTML('beforeend', ROUTES.login.component());
+            new LoginAndRegisterContainer(window.onNavigate, true);
             break;
         default:
             break;

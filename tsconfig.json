@@ -3,7 +3,8 @@
         "isolatedModules": true,
         "useDefineForClassFields": true,
         "types": ["vite/client"],
-        "module": "es2022"
+        "module": "es2022",
+        "lib": ["es2017", "DOM"]
     },
     "include": ["src/**/*"],
     "exclude": ["**/*.spec.ts"]

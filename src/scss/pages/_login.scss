@@ -1,0 +1,8 @@
+@use '../abstract/mixins';
+@use '../base/variables';
+@use '../abstract/functions';
+
+
+.login__main {
+    @include mixins.flex-container(column,center,center);
+}

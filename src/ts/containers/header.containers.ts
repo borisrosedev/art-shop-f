@@ -1,21 +1,21 @@
-import BaseContainer from "../models/base-container.models";
-
-
+import BaseContainer from '../models/base-container.models';
+import navItemComponent from '../ui/components/navbar/nav-item.components';
+import navLinkComponent from '../ui/components/navbar/nav-link.components';
 class HeaderContainer extends BaseContainer {
     constructor(onNavigate: (h: string) => void) {
         super(onNavigate);
     }
 
     onLogin() {
-        this.onNavigate('#login')
+        this.onNavigate('#login');
     }
 
     onCart() {
-        this.onNavigate('#cart')
+        this.onNavigate('#cart');
     }
 
-    onRegister(){
-        this.onNavigate('#register')
+    onRegister() {
+        this.onNavigate('#register');
     }
 }
 

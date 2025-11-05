@@ -12,7 +12,11 @@ export default defineConfig(({ mode }) => {
             __APP_ENV__: JSON.stringify(env.APP_ENV),
         },
         test: {
-            environment: 'jsdom', 
+            environment: 'jsdom',
+            coverage: {
+                include: ['src/**/*.{ts,tsx}'],
+                provider: 'v8' // or 'istanbul'
+            },
         },
         css: {
             preprocessorOptions: 'sass-embedded',

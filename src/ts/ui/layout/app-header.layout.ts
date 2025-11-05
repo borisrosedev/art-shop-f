@@ -3,7 +3,6 @@ import buttonComponent from '../components/shared/button.components';
 import figureComponent from '../components/shared/figure.components';
 import titleComponent from '../components/shared/title.components';
 
-
 function appHeaderLayout() {
     return `
         <nav class="app__header navbar bg-body-tertiary fixed-top">

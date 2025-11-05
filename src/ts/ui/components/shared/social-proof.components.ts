@@ -5,12 +5,12 @@ function socialProofComponent({
     extension,
     count,
     text,
-    ariaLabel
+    ariaLabel,
 }: {
-    ariaLabel: string
-    count?: number | string
-    text?: string
-    extension?: 'jpeg' | 'jpg' | 'png' ;
+    ariaLabel: string;
+    count?: number | string;
+    text?: string;
+    extension?: 'jpeg' | 'jpg' | 'png';
     iconName: 'eye-open' | 'eye-close' | 'filled-heart' | 'empty-heart';
 }) {
     return `

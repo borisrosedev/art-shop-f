@@ -1,0 +1,3 @@
+@function border-helper($color: red) {
+    @return solid 2px $color;
+}

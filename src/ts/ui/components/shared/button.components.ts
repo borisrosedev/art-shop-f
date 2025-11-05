@@ -1,32 +1,10 @@
-interface ButtonProps {
+import { Button } from "../../../interfaces/button.interfaces";
 
-    content?: string
-    id?: string
-    bootstrapped?: boolean
-    dismissElementId?: string
-    toggleElementId?: string
-    targetElementId?: string
-    slideElement?: 'prev' | 'next'
-    ariaControlsElementId?: string
-    type?: 'submit' | 'reset'
-    ariaLabel?: string
-    classNames?:
-        | 'btn-primary'
-        | 'btn-secondary'
-        | 'btn-success'
-        | 'btn-danger'
-        | 'btn-warning'
-        | 'btn-info'
-        | 'btn-light'
-        | 'btn-dark'
-        | 'btn-link'
-        | string;
-}
 
-function buttonComponent(props: ButtonProps) {
-    console.log('[button-component]', props)
+function buttonComponent(props: Button) {
+    console.log('[button-component]', props);
 
-    if(!props.bootstrapped) {
+    if (!props.bootstrapped) {
         return `<button 
         id="${props.id ?? ''}"
         type="${props.type ? props.type : 'button'}" 
@@ -35,7 +13,7 @@ function buttonComponent(props: ButtonProps) {
         class="btn ${props.classNames ?? ''}">${props.content}</button>`;
     }
 
-        return (`
+    return `
         <button 
             id="${props.id ?? ''}"
             type="${props.type ? props.type : 'button'}"
@@ -46,9 +24,7 @@ function buttonComponent(props: ButtonProps) {
             aria-controls="${props.ariaControlsElementId ?? ''}"
             aria-label="${props.ariaLabel ?? ''}"
             class="btn ${props.classNames ?? ''}"
-        >${props.content ?? '' }</button>`);
-
-
+        >${props.content ?? ''}</button>`;
 }
 
 export default buttonComponent;
